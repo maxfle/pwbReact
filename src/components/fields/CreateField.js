@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createProject } from '../../store/actions/projectActions';
+import { createField } from '../../store/actions/fieldActions';
 
-class CreateProject extends Component {
+class CreateField extends Component {
     state = {
         nameOfField: '',
         address: '',
@@ -15,7 +15,7 @@ class CreateProject extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.createProject(this.state)
+        this.props.createField(this.state)
     }
 
 
@@ -23,7 +23,7 @@ class CreateProject extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Create Project</h5>
+                    <h5 className="grey-text text-darken-3">Create Field</h5>
                     <div className="input-field">
                         <label htmlFor="nameOfField">Name of Field</label>
                         <input type="text" id="nameOfField" onChange={this.handleChange}/>
@@ -47,8 +47,8 @@ class CreateProject extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return { 
-        createProject: (project) => dispatch(createProject(project))
+        createField: (field) => dispatch(createField(field))
     }
 }
 
-export default connect(null, mapDispatchToProps)(CreateProject);
+export default connect(null, mapDispatchToProps)(CreateField);
