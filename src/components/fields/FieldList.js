@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const FieldList = ({fields}) => {
     return (
-        <div className="fieldt-list section">
+        <div className="field-list section">
             { fields && fields.map(field => {
                 return (
-                    <Link to={'/field/' + field.id} >
-                        <FieldSummary field={field} key={field.id} />
+                    <Link to={'/field/' + field.id} key={field.id} >
+                        <FieldSummary field={field} />
                     </Link>
                 )
             })}

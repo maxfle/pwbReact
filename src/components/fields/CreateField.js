@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createField } from '../../store/actions/fieldActions';
+import { Redirect } from 'react-router-dom';
 
 class CreateField extends Component {
     state = {
@@ -20,6 +21,9 @@ class CreateField extends Component {
 
 
     render() {
+        const { auth } = this.props; 
+        if (!auth.uid) return <Redirect to='/signin' />
+
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
@@ -45,10 +49,16 @@ class CreateField extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return { 
         createField: (field) => dispatch(createField(field))
     }
 }
 
-export default connect(null, mapDispatchToProps)(CreateField);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateField);
