@@ -17,6 +17,7 @@ class CreateField extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.createField(this.state)
+        this.props.history.push('/');
     }
 
 

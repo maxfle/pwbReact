@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import moment from 'moment';
 
 const FieldDetails = (props) => {
     const { field } = props;
@@ -15,7 +16,7 @@ const FieldDetails = (props) => {
                     </div>
                     <div className="card-action grey lighten-4 grey-text">
                         <div>Posted by {field.authorFirstName} {field.authorLastName}</div>
-                        <div>Date</div>
+                        <div>{moment(field.createdAt.toDate()).calendar()}</div>
                     </div>
                 </div>
             </div>

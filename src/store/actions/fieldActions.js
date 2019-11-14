@@ -2,11 +2,13 @@ export const createField = (field) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         // make async call to database
         const firestore = getFirestore();
+        const profile = getState().firebase.profile;
+        const authorId = getState().firebase.auth.uid;
         firestore.collection('fields').add({
             ...field, 
-            authorFirstName: 'Max',
-            authorLastName: 'Fleischman',
-            authorId: 12345,
+            authorFirstName: profile.firstName,
+            authorLastName: profile.lastName,
+            authorId: authorId,
             createdAt: new Date()
         }).then(()=> {
             dispatch({ type: 'CREATE_FIELD', field });
