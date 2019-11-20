@@ -12,7 +12,7 @@ const FieldDetails = (props) => {
                 <div className="card z-depth-0">
                     <div className="card-content">
                         <span className="card-title">{field.nameOfField}</span>
-                        <p>{ field.address }</p><span className="valign-wrapper secondary-content"><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}`} class="secondary-content red black-text btn"> <span className="valign-wrapper">map<i class=" small material-icons">directions</i></span></a></span>
+                        <p>{ field.address }</p><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}`} class="secondary-content red black-text btn-large"> <span className="valign-wrapper">map<i class=" small material-icons">directions</i></span></a><br/><br/>
                     </div>
                     <div className="card-action grey lighten-4 grey-text">
                         <div>Posted by {field.authorFirstName} {field.authorLastName}</div>
