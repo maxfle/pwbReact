@@ -1,15 +1,25 @@
 import React from 'react';
 import FieldSummary from './FieldSummary';
-// import { Link } from 'resact-router-dom';
+
 
 const FieldList = ({fields}) => {
     return (
+        
         <div className="field-list section">
+            <div>
+                <table>
+                    <thead className="white">
+                        <tr>
+                            <th>Name of Field</th>
+                            <th>Posted by</th>
+                            <th>Posted at</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
             { fields && fields.map(field => {
                 return (
-                    // <Link to={'/field/' + field.id} key={field.id} >
-                        <FieldSummary field={field} />
-                    // </Link>
+                    <FieldSummary field={field} />
                 )
             })}
         </div>

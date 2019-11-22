@@ -20,3 +20,10 @@ form button, form h5 {
     margin: 20px 0;
 }
 
+table, tbody, tr, td {
+    min-width: 200px;
+}
+
+table, thead, tr, th {
+    min-width: 200px;
+}
