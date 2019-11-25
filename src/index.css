@@ -20,10 +20,27 @@ form button, form h5 {
     margin: 20px 0;
 }
 
-table, tbody, tr, td {
-    min-width: 200px;
+.field-summary {
+    background: white;
+}
+
+table {
+    margin-left: -50px;
 }
 
 table, thead, tr, th {
     min-width: 200px;
 }
+
+.fDetails {
+    padding-left: 60px;
+}
+
+table, tbody, tr, td {
+    min-width: 200px;
+}
+
+
+
+
+

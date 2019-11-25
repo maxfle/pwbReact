@@ -8,11 +8,14 @@ const FieldList = ({fields}) => {
         <div className="field-list section">
             <div>
                 <table>
-                    <thead className="white">
+                    <thead className="white responsive">
                         <tr>
                             <th>Name of Field</th>
+                            <th>City</th>
                             <th>Posted by</th>
                             <th>Posted at</th>
+                            <th className="center-align fDetails">Field details</th>
+                            <th className="right-align">Map to field</th>
                         </tr>
                     </thead>
                 </table>
