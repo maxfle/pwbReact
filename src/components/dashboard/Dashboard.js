@@ -13,7 +13,7 @@ class Dashboard extends Component {
         return (
             <div className="dashboard container">
                 <div className="row">
-                    <div className="col s12 m8">
+                    <div className="col s8 m6">
                         <FieldList fields={fields}/>
                     </div>
                 </div>

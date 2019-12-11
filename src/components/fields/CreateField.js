@@ -38,6 +38,10 @@ class CreateField extends Component {
                         <input type="text" id="address" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
+                        <label htmlFor="city">City</label>
+                        <input type="text" id="city" onChange={this.handleChange}/>
+                    </div>
+                    <div className="input-field">
                         <label htmlFor="description">Description</label>
                         <textarea id="description" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
