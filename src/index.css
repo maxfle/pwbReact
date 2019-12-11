@@ -40,7 +40,9 @@ table, tbody, tr, td {
     min-width: 200px;
 }
 
-
+.mb100 {
+    margin-bottom: 100px;
+}
 
 
 
