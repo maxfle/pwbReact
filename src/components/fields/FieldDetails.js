@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import moment from 'moment'; 
+import { NavLink } from 'react-router-dom';
+
 
 const FieldDetails = (props) => {
     const { field } = props;
@@ -14,8 +16,9 @@ const FieldDetails = (props) => {
                         <span className="card-title">{field.nameOfField}</span>
                         <p>{ field.address }</p>
                         <a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}`} class="secondary-content red black-text btn-large"> <span className="valign-wrapper">map<i class="small material-icons">directions</i></span></a>
-                        <br/><br/><br/>                        
-                        <button className="secondary-content btn-large mb100 black-text"> Edit<i class="small material-icons">edit</i></button>
+                        <br/><br/><br/>       
+                                         
+                        <button className="secondary-content btn-large mb100 black-text" >Edit<i class="small material-icons"><NavLink to='/edit'>Edit</NavLink>edit</i></button>
                         <br/><br/>
 
                     </div>
@@ -42,9 +45,6 @@ const mapStateToProps = (state, ownProps) => {
     const id = ownProps.match.params.id
     const fields = state.firestore.data.fields
     const field = fields ? fields[id] : null
-    return {
-        field: field
-    }
 }
 
 export default compose(

@@ -4,7 +4,7 @@ import FieldSummary from './FieldSummary';
 
 const FieldList = ({fields}) => {
     return (
-        
+            
         <div className="field-list section">
             <div>
                 <table>

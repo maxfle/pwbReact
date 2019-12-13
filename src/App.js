@@ -6,6 +6,7 @@ import FieldDetails from './components/fields/FieldDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import CreateField from './components/fields/CreateField';
+import EditField from './components/fields/EditField';
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateField} />
+            <Route path='/edit' component={EditField} />
           </Switch>
         </div>
       </BrowserRouter>
