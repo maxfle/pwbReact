@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
@@ -15,10 +15,12 @@ const FieldDetails = (props) => {
                     <div className="card-content">
                         <span className="card-title">{field.nameOfField}</span>
                         <p>{ field.address }</p>
-                        <a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}`} class="secondary-content red black-text btn-large"> <span className="valign-wrapper">map<i class="small material-icons">directions</i></span></a>
+                        <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}`} class="secondary-content red black-text btn-large"> <span className="valign-wrapper">map<i class="small material-icons">directions</i></span></a>
                         <br/><br/><br/>       
                                          
-                        <button className="secondary-content btn-large mb100 black-text" >Edit<i class="small material-icons"><NavLink to='/edit'>Edit</NavLink>edit</i></button>
+                        <NavLink to='/edit'><button className="secondary-content btn-large mb100 black-text" >Edit<i class="small material-icons">edit</i></button></NavLink>
+                        <br/><br/>
+                        <button className="secondary-content btn-large mb100 black-text" >Delete<i class="small material-icons"></i></button>
                         <br/><br/>
 
                     </div>

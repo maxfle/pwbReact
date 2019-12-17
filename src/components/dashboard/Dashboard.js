@@ -8,7 +8,7 @@ import { compose } from 'redux';
 class Dashboard extends Component {
     render() {
         // console.log(this.props)
-        const { fields, auth } = this.props;
+        const { fields } = this.props;
         // if (!auth.uid) return <Redirect to='/signin' />
         return (
             <div className="dashboard container">

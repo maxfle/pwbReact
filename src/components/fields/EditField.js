@@ -34,7 +34,7 @@ class editField extends Component {
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Edit Field</h5>
                     <div className="input-field">
-                        <label htmlFor="nameOfField">{field.nameOfField}</label>
+                        <label htmlFor="nameOfField">Name of Field</label>
                         <input type="text" id="nameOfField" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
