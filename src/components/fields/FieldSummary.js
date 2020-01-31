@@ -12,7 +12,7 @@ const FieldSummary = ({field}) => {
                     <td classname="fieldAuthors">{field.authorFirstName} {field.authorLastName}</td>
                     <td classname="fieldCreatedAt">{moment(field.createdAt.toDate()).calendar()}</td>
                     <td><a href={'/field/' + field.id} key={field.id} className="secondary-content white black-text btn"><span className="valign-wrapper">details<i class="black-text small material-icons">details</i></span></a></td>
-                    <td><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}`} class="secondary-content red black-text btn"> <span className="valign-wrapper">map<i class=" small material-icons">directions</i></span></a></td>
+                    <td><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${field.address.split(' ').join('+').replace("&","and")}+${field.city}`} class="secondary-content red black-text btn"> <span className="valign-wrapper">map<i class=" small material-icons">directions</i></span></a></td>
                 </tr>
             </tbody>
         </table>
