@@ -4,7 +4,8 @@ import moment from 'moment';
 
 const FieldSummary = ({field}) => {
     return (
-        <table className="highlight responsive black-text z-depth-4 field-summary">
+        
+        <table className="highlight black-text z-depth-4 field-summary responsive-table">
             <tbody>
                 <tr>
                     <td classname="fieldNameOf">{field.nameOfField}</td>
@@ -16,6 +17,8 @@ const FieldSummary = ({field}) => {
                 </tr>
             </tbody>
         </table>
+
+
         // <div>
         // <ul className="collection z-depth-5 black-text">
         //     <li className="collection-item field-summary">

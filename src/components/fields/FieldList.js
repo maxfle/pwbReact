@@ -3,12 +3,11 @@ import FieldSummary from './FieldSummary';
 
 
 const FieldList = ({fields}) => {
-    return (
-        
+    return ( 
         <div className="field-list section">
             <div>
                 <table>
-                    <thead className="white responsive">
+                    <thead className="white">
                         <tr>
                             <th>Name of Field</th>
                             <th>City</th>

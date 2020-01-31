@@ -29,16 +29,17 @@ table {
 }
 
 table, thead, tr, th {
-    min-width: 200px;
+    min-width: 80%;
 }
 
-.fDetails {
+/* .fDetails {
     padding-left: 60px;
-}
+} */
 
 table, tbody, tr, td {
-    min-width: 200px;
+    min-width: 80%;
 }
+
 
 .mb100 {
     margin-bottom: 100px;
